@@ -11,9 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160804035704) do
-=======
 ActiveRecord::Schema.define(version: 20160814221817) do
 
   create_table "items", force: :cascade do |t|
@@ -24,7 +21,6 @@ ActiveRecord::Schema.define(version: 20160814221817) do
   end
 
   add_index "items", ["user_id"], name: "index_items_on_user_id"
->>>>>>> 5-create-to-do-items
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
