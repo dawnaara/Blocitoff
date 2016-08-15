@@ -1,5 +1,9 @@
 <div>
   <h2><%= @user.email %></h2>
 </div>
-
-
+<div id="item_wrapper">
+	<%= render @user.items %>
+	<div id="form">
+	<%= render "items/form" %>	
+	</div>
+</div>
