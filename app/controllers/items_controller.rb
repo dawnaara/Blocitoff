@@ -1,18 +1,21 @@
 class ItemsController < ApplicationController
 
   def create
-    @user = User.find(params[:user_id])
-    @item = @user.items.build(item_params)
-    @item.user = current_user
+    @item = current_user.items.build(item_params)
 
     if @item.save
-      flash[:notice] = "Item was added to list."
-      redirect_to [@user, @item]
+      flash[:notice] = "Item was added to list."      
     else
-
       flash.now[:alert] = "There was an error adding your item. Please try again."
-      render :new
+      
     end
+    redirect_to current_user
+  end
+
+  private 
+
+  def item_params
+    params.require(:item).permit(:name)
   end
 end
 

@@ -5,5 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :items
+
+  def name
+  	"#{first_name} #{last_name}"
+  end
       
 end
