@@ -49,5 +49,6 @@ end
 
   gem 'devise'
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 
 
