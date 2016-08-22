@@ -6,8 +6,7 @@ class ItemsController < ApplicationController
     if @item.save
       flash[:notice] = "Item was added to list."      
     else
-      flash.now[:alert] = "There was an error adding your item. Please try again."
-      
+      flash.now[:alert] = "There was an error adding your item. Please try again."      
     end
     redirect_to current_user
   end
@@ -18,5 +17,4 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name)
   end
 end
-
 
