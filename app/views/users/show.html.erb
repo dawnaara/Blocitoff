@@ -1,5 +1,17 @@
 <div>
-  <h2><%= @user.email %></h2>
+  <h2><%= @user.name %></h2>
 </div>
 
+<h2>Items</h2>
+<table class="table"> 
+<thead>
+	<th>Item</th>
+	<th>Time Remaining</th>
+	<th></th>
+</thead>
+	<%= render @user.items %>
+</table>
 
+<% if @user == current_user %>
+	<%= render "items/form" %>
+<% end %>
