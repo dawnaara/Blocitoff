@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class ItemsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should get create" do
+    get :create
+    assert_response :success
+  end
+
 end
