@@ -1,14 +1,13 @@
- lines (15 sloc)  254 Bytes
 <div>
-  <h2><%= @user.name %></h2>
+  <h2>Hello <%= @user.name %>!</h2>
 </div>
 
 <h2>Items</h2>
 <table class="table"> 
 <thead>
 	<th>Item</th>
+	<th>Completed</th>
 	<th>Time Remaining</th>
-	<th></th>
 </thead>
 	<%= render @user.items %>
 </table>

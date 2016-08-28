@@ -1,7 +1,7 @@
 <%= form_for([current_user, @item]) do |f| %>
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: 'New Item' %>
   </div>
   <div class="actions">
     <%= f.submit %>

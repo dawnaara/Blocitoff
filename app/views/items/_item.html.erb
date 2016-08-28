@@ -1,6 +1,10 @@
 <!-- only put code needed to display one item. -->
 <tr>
   <td><%= item.name %></td>
-  <td></td>
+  <td><%= link_to "", user_item_path(@user, item.id), method: :delete, class: 'glyphicon glyphicon-ok', data: "Are you sure?"%></td>
   <td></td>
 </tr>
+
+
+<!-- refer to mackenzie child _todo_items.html.erb and "building a checklist tutorial" 1:00hour -->
+
