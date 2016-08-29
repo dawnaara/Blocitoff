@@ -1,5 +1,5 @@
 <!-- only put code needed to display one item. -->
-<tr>
+<tr id="item-<%= item.id %>">
   <td><%= item.name %></td>
   <td><%= link_to "", user_item_path(@user, item.id), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
   <td></td>

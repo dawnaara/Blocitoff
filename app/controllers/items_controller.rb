@@ -25,13 +25,6 @@ class ItemsController < ApplicationController
       format.html
       format.js
     end    
-
-  end
-
-  def complete
-    @item.update_attribute(:completed_at, Time.now)
-
-    redirect_to current_user, notice: "Item completed!"
   end
 
   private 
