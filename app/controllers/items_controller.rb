@@ -13,14 +13,18 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = @user.items.find(params[:item_id])
+    @item = current_user.items.find(params[:id])
+    @item.update_attribute(:completed_at, Time.now)
     if @item.destroy
       flash[:notice] = "Item was deleted."      
     else
       flash.now[:alert] = "There was an error deleting your item. Please try again."      
     end
 
-    redirect_to current_user
+    respond_to do |format|
+      format.html
+      format.js
+    end    
 
   end
 
@@ -33,7 +37,7 @@ class ItemsController < ApplicationController
   private 
 
   def set_users
-    @users = User.find(params[:id])
+    @users = User.find(params[:user_id])
   end
 
   def item_params
