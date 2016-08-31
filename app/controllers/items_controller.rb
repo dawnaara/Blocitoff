@@ -3,8 +3,6 @@ class ItemsController < ApplicationController
 
   def create
     @item = current_user.items.build(item_params)
-    @item = current_user.items
-    @item.update_attribute(:created_at, Time.now)
 
     if @item.save
       flash[:notice] = "Item was added to list."      
